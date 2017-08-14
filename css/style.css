@@ -322,6 +322,7 @@ width: 25%;
    		
    		width: 100%;
 	}
+	
 	.title{
 		flex-basis:1;
         order:1;
@@ -334,7 +335,7 @@ width: 25%;
         order:2;
         padding-right: 10%;
     }
-
+   
 
    .contenedorDiv{
    		flex-direction: column;
@@ -407,7 +408,7 @@ width: 25%;
 	.nav a:link, .nav a:visited {
 		
 		height: 40px;
-		padding: 5px 1.5em;
+		padding: 5px 0.5em;
 		text-decoration: none;
 		color: #fff;
 
