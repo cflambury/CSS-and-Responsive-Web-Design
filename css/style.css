@@ -93,40 +93,72 @@ ul.social-icons {
     text-decoration: none;
 }
 
-/*FIN DE ICONOS */
+/*FIN DE ICONOS  y animaciones */
 body {
 		font-size: 87.5%;
 		background-color: #02010a;
+		font-family: 'DancingScript';
 		line-height: 1.429;
 		margin: 0;
 		padding: 0;
 		text-align: left;
-		color: #000305;
+		
 
 	}
-	.body {clear: both; margin: 0 auto; }
+.fondo{
+	width: 100%;
+    position: absolute;
+	animation: mianimacion 2s;
+	
+
+
+}
+@-webkit-keyframes mianimacion{
+	 0%  { left:0%; top:100%;}
+    100% { left:0%; top:0%;}
+
+}
 img.right figure.right {float: right; margin: 0 0 2em 2em;}
 img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 
 #cabecera {
-	margin: 0 auto;
+	margin: 0 4% 0 4%;
 	padding: 2.5em 0 0 0;
 	background-color:  #5b7989;
-	 border-radius: 10px 10px 0px;
+	border-radius: 10px 10px 0px;
+	display: flex;
+	flex-direction: column;
+	
+	
+	
+	
+	
+
+}
+.contenedorcabecera{
+	display: flex;
+	flex-direction: row;
+	justify-content:flex-start;
+    align-items:stretch;
+    width: 100%;
 }
 
 
+#cabecera .contenedorcabecera .tituloheader{
+	font-size: xx-large;
+	text-shadow: 2px 2px #02010a;
+	padding-left: 1%;
+	color:  #fff;
+	
+}
 
-#cabecera h1 a:link, #cabecera h1 a:visited {
-		/*display: block;
-		font-weight: bold;
+
+#cabecera .contenedorheader a:link, #cabecera .contenedorheader a:visited {
+		
 		margin: 0 0 .6em .2em;
-		text-decoration: none;
-		width: 465px;*/
-		margin: 0 0 .6em .2em;
-		text-shadow: 2px;
-		color:  #02010a;
+		
+		color: #FFF;
 		 text-decoration: none;
 
 	}
@@ -134,7 +166,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 #wallpaper{
 	text-align: center;
-	margin: 1%;
+	
 	
 }
 div #imagen1{
@@ -145,6 +177,7 @@ div #imagen1{
 #contenido{
 
 	background-color: #82c3a6;
+	margin: 0 4% 0 4%;
 }
 /* estilos para las imagenes secundarias*/
 
@@ -153,6 +186,7 @@ div #imagen1{
 	
 	text-align: center;
 	background-color: #d5c75f;
+	margin: 0 4% 0 4%;
 
 }
 #league .articulos{
@@ -162,6 +196,7 @@ div #imagen1{
 #league .articulos img{
 	width:50%;
 	margin-top:50px;
+
 	
 
 }
@@ -169,6 +204,7 @@ div #imagen1{
 	display: flex;
 	flex-direction: column;
 	background-color: #d5c75f;
+	font-size: large;
 	
 }
 #league #imagen2 {order: 1;}
@@ -252,15 +288,26 @@ div #imagen1{
 	flex-direction: column;
 	border-radius: 0px 0px 10px 10px;
 	background-color: #C6d5c5;
-	font-family: 'DancingScript';
-	width: 100%;
+	
+	
+	margin: 0 4% 2% 4%;
 
 }
 
+
 .contenedorDiv>div{
 text-align: center;
-padding: 10px;
+
 width: 25%;
+}
+
+.title{
+	order: 1;
+	width: 60%
+}
+.nav{
+	order:2;
+	width: 60%;
 }
 
 .Contacto {order:1; width: 25%;}
@@ -269,10 +316,30 @@ width: 25%;
 .derechos {order:4; width: 25%;}
 @media(max-width: 900px){
 
+	.contenedorcabecera{
+		flex-direction: column;
+   		align-items: center;
+   		
+   		width: 100%;
+	}
+	.title{
+		flex-basis:1;
+        order:1;
+        text-align: center;
+        
+
+	}
+	.nav{
+		flex-basis:2;
+        order:2;
+        padding-right: 10%;
+    }
+
+
    .contenedorDiv{
-   	flex-direction: column;
-   	align-items: center;
-   	width: 100%;
+   		flex-direction: column;
+   		align-items: center;
+   		width: 100%;
 		 
 	}
   .Contacto {
@@ -328,36 +395,25 @@ width: 25%;
 
 
 /*nav Generico*/
-	#cabecera nav {
-		font-size: 1.143em;
+
+
+	
+	
+
+	#cabecera ul {list-style: none; margin: 0 auto; font-size: 1.143em;
+		height: 40px;line-height: 30px;}
+	#cabecera li {float: right;  margin: 0;}
+
+	.nav a:link, .nav a:visited {
+		
 		height: 40px;
-		line-height: 30px;
-		margin: 0 auto 2em auto;
-		padding: 0;
-		text-align: center;
-		width: 100%;
-		/* primer parametro un numero entre 0 y 360
-			%
-			%	
-		 */
-		background: hsl(0, 0%, 21%);
-	}
-
-	#cabecera nav ul {list-style: none; margin: 0 auto; width: 800px;}
-	#cabecera nav li {float: left; display: inline; margin: 0;}
-
-	#cabecera nav a:link, #banner nav a:visited {
-		display: inline-block;
-		height: 30px;
 		padding: 5px 1.5em;
 		text-decoration: none;
 		color: #fff;
+
 	}
 
-	#cabecera nav a:hover, #banner nav a:active{
-		background: hsla(200,60%,50%,0.65);
-		text-shadow: none !important;
-	}
+	
 
 
 /*Paisaje.html*/
@@ -411,6 +467,7 @@ width: 25%;
 	display: flex;
 	flex-direction: column;
 	background-color: #d5c75f;
+	margin: 0 4% 0 4%;
 	
 }
 
